@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeKP">
+        <activity android:name=".BasicActivity" />
+        <activity android:name=".AdvanceActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
