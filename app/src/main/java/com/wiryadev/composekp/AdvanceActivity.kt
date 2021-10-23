@@ -5,15 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.ContentAlpha
-import androidx.compose.material.LocalContentAlpha
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.wiryadev.composekp.ui.theme.ComposeKPTheme
@@ -25,13 +20,15 @@ class AdvanceActivity : ComponentActivity() {
 
         setContent {
             ComposeKPTheme {
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(color = MaterialTheme.colors.secondary),
-                ) {
-                    Composable1()
-                    Composable2()
+                Scaffold {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(color = MaterialTheme.colors.secondary),
+                    ) {
+                        Composable1()
+                        Composable2()
+                    }
                 }
             }
         }
