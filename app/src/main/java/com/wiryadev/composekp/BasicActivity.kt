@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import com.wiryadev.composekp.ui.theme.ComposeKPTheme
 
 class BasicActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
