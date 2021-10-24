@@ -5,9 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -24,7 +25,7 @@ class AdvanceActivity : ComponentActivity() {
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
-                            .background(color = MaterialTheme.colors.secondary),
+                            .background(color = MaterialTheme.colors.primary),
                     ) {
                         Composable1()
                         Composable2()
@@ -37,33 +38,30 @@ class AdvanceActivity : ComponentActivity() {
 
 @Composable
 fun Composable1() {
-    CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
-        Column(
-            modifier = Modifier
-                .padding(8.dp)
-                .fillMaxWidth()
-                .background(
-                    color = MaterialTheme.colors.background,
-                    shape = MaterialTheme.shapes.medium,
-                )
-                .padding(12.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            Text(
-                text = "Title",
-                style = MaterialTheme.typography.h4
+    Column(
+        modifier = Modifier
+            .padding(8.dp)
+            .fillMaxWidth()
+            .background(
+                color = MaterialTheme.colors.background,
+                shape = MaterialTheme.shapes.medium,
             )
-            Text(
-                text = "Body",
-                style = MaterialTheme.typography.body1
-            )
-            Text(
-                text = "Sub",
-                style = MaterialTheme.typography.subtitle1
-            )
-        }
+            .padding(12.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text(
+            text = "Title",
+            style = MaterialTheme.typography.h4
+        )
+        Text(
+            text = "Body",
+            style = MaterialTheme.typography.body1
+        )
+        Text(
+            text = "Sub",
+            style = MaterialTheme.typography.subtitle1
+        )
     }
-
 }
 
 @Composable

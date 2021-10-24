@@ -43,8 +43,8 @@ fun ComposeKPTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composa
 
     MaterialTheme(
         colors = colors,
-        typography = Typography,
-        shapes = Shapes,
+        typography = CustomTypography,
+        shapes = CustomShapes,
         content = content
     )
 }

@@ -8,14 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ComposeKP">
+        android:theme="@style/Theme.ComposeKP.NoActionBar">
         <activity android:name=".BasicActivity" />
         <activity android:name=".AdvanceActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.ComposeKP.NoActionBar">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

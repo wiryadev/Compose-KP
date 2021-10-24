@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
@@ -28,8 +29,11 @@ class MainActivity : ComponentActivity() {
                     ) {
                         Button(
                             onClick = {
-                                startActivity(Intent(this@MainActivity, BasicActivity::class.java))
-                            }
+                                startActivity(
+                                    Intent(this@MainActivity, BasicActivity::class.java)
+                                )
+                            },
+                            shape = MaterialTheme.shapes.large,
                         ) {
                             Text(text = "Go To Basic")
                         }
@@ -37,12 +41,10 @@ class MainActivity : ComponentActivity() {
                         Button(
                             onClick = {
                                 startActivity(
-                                    Intent(
-                                        this@MainActivity,
-                                        AdvanceActivity::class.java
-                                    )
+                                    Intent(this@MainActivity, AdvanceActivity::class.java)
                                 )
-                            }
+                            },
+                            shape = MaterialTheme.shapes.large,
                         ) {
                             Text(text = "Go To Advanced")
                         }

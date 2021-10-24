@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Button
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -29,13 +30,12 @@ class BasicActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeKPTheme {
-                // A surface container using the 'background' color from the theme
                 Scaffold {
                     Box(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center,
                     ) {
-                        ColumnExample()
+                        ClickableComposable()
                     }
                 }
             }
@@ -103,7 +103,8 @@ fun ClickableComposable() {
     }
 
     Button(
-        onClick = { counter.value++ }
+        onClick = { counter.value++ },
+        shape = MaterialTheme.shapes.large,
     ) {
         Text(text = "Diklik: ${counter.value} kali")
     }

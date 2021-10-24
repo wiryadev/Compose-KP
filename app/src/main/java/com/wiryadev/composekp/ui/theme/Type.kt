@@ -20,7 +20,7 @@ private val KarlaFontFamily = FontFamily(
 )
 
 // Set of Material typography styles to start with
-val Typography = Typography(
+val CustomTypography = Typography(
     defaultFontFamily = MontserratFontFamily,
     h1 = TextStyle(
         fontWeight = FontWeight.Light,
