@@ -46,7 +46,7 @@ class MainActivity : ComponentActivity() {
                             },
                             shape = MaterialTheme.shapes.large,
                         ) {
-                            Text(text = "Go To Advanced")
+                            Text(text = "Go To Advance")
                         }
                     }
                 }

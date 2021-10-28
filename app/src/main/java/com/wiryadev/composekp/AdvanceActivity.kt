@@ -29,6 +29,7 @@ class AdvanceActivity : ComponentActivity() {
                     ) {
                         Composable1()
                         Composable2()
+                        Composable3()
                     }
                 }
             }
@@ -38,6 +39,25 @@ class AdvanceActivity : ComponentActivity() {
 
 @Composable
 fun Composable1() {
+    Box(
+        modifier = Modifier
+            .padding(8.dp)
+            .fillMaxWidth()
+            .background(
+                color = MaterialTheme.colors.background,
+                shape = MaterialTheme.shapes.medium,
+            )
+            .padding(12.dp),
+    ) {
+        Text(
+            text = "Title",
+            style = MaterialTheme.typography.h4
+        )
+    }
+}
+
+@Composable
+fun Composable2() {
     Column(
         modifier = Modifier
             .padding(8.dp)
@@ -65,7 +85,7 @@ fun Composable1() {
 }
 
 @Composable
-fun Composable2() {
+fun Composable3() {
     Row(
         modifier = Modifier
             .padding(8.dp)
@@ -101,6 +121,7 @@ fun PreviewAdvance() {
         ) {
             Composable1()
             Composable2()
+            Composable3()
         }
     }
 }
